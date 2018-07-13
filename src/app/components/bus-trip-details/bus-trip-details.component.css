@@ -1,0 +1,26 @@
+h3 {
+    cursor: pointer
+}
+
+th {
+    background: #cadbf7
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+    margin: 20px 0;
+}
+
+.glyphicon {
+    float: right;
+}
+
+.bus-service-container {
+    padding: 5px 25px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}

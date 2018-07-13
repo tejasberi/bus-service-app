@@ -1,0 +1,40 @@
+<div class="bus-service-container">
+  <h3 (click)="isOpen = !isOpen">
+    <span class="bus-service-title">{{busService.organisation}} - {{busService.date}}</span>
+    <a>
+      <span class="glyphicon glyphicon-chevron-down" *ngIf="!isOpen"></span>
+      <span class="glyphicon glyphicon-chevron-up" *ngIf="isOpen"></span>
+    </a>
+  </h3>
+  <div *ngIf="isOpen">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Bus ID</th>
+          <th>Route Variant</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bus of busService.busData" class="bus-trip">
+          <td>{{bus.busId}}</td>
+          <td>
+            <span *ngIf="!(bus.routeVariant === 'UNKNOWN'); else NotKnown">
+                <b>{{bus.routeVariant.slice( 0, 3 )}}</b> {{bus.routeVariant.slice( 4, 7 )}}
+            </span>
+          </td>
+          <td ontimeTracker [status]="bus.deviationFromTimetable"></td>
+        </tr>
+      </tbody>
+    </table>
+    <textarea class="form-control" rows="5" id="notes" [(ngModel)]="notesData"></textarea>
+    <button type="button" class="btn btn-info" (click)="saveNotes(notesData)">Save Notes</button>
+    <div *ngIf="notesArray.length > 0">
+      <h4>Saved Notes</h4>
+      <ul>
+        <li *ngFor="let note of notesArray">{{note}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<ng-template #NotKnown>Not available</ng-template>
