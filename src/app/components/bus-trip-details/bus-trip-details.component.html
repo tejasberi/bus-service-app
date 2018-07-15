@@ -6,6 +6,8 @@
       <span class="glyphicon glyphicon-chevron-up" *ngIf="isOpen"></span>
     </a>
   </h3>
+
+  <!--table to show the vus service details-->
   <div *ngIf="isOpen">
     <table class="table">
       <thead>
@@ -29,6 +31,8 @@
     </table>
     <textarea class="form-control" rows="5" id="notes" [(ngModel)]="notesData"></textarea>
     <button type="button" class="btn btn-info" (click)="saveNotes(notesData)">Save Notes</button>
+    
+    <!--section to display the entered notes-->
     <div *ngIf="notesArray.length > 0">
       <h4>Saved Notes</h4>
       <ul>
@@ -37,4 +41,6 @@
     </div>
   </div>
 </div>
+
+<!--error handler for the unknown service status-->
 <ng-template #NotKnown>Not available</ng-template>

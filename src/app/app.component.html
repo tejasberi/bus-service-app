@@ -1,3 +1,4 @@
+<!--navigation header-->
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -5,12 +6,15 @@
     </div>
   </div>
 </nav>
+
+<!--main container-->
 <div class="container">
   <div class="row">
     <div class="col-sm-6 bus-data">
       <div *ngIf="busServiceData">
         <app-bus-service [busServiceData]="busServiceData"></app-bus-service>
       </div>
+      <!--error handler-->
       <div class="error-container" *ngIf="!busServiceData">
         Data cannot be fetched at the moment!!
       </div>

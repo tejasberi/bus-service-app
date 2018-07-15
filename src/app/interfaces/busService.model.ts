@@ -5,11 +5,11 @@ export interface BusServiceData {
             date: string;
             organisation: string;
         }
-    ]
-}
+    ];
+};
 
 export interface BusTripData {
     busId: string;
     deviationFromTimetable: number;
     routeVariant: string;
-}
+};

@@ -3,12 +3,12 @@ import { AppComponent } from './app.component';
 import { HttpService } from './services/http.service';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BUS_SERVICE_DATA } from './mocks/busService.mock';
-import { Observable } from "rxjs";
+import { Observable } from 'rxjs';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/throw';
 
 class HttpServiceMock {
-  getBusServiceDetails() { return Observable.of(BUS_SERVICE_DATA) }
+  getBusServiceDetails() { return Observable.of(BUS_SERVICE_DATA); }
 }
 
 describe('Bus reporting app', () => {
@@ -29,7 +29,7 @@ describe('Bus reporting app', () => {
     }).compileComponents();
   }));
 
-   beforeEach(() => {
+  beforeEach(() => {
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
   });
@@ -42,10 +42,10 @@ describe('Bus reporting app', () => {
   }));
 
   describe('API call to get bus data', () => {
-    
+
     describe('on success', () => {
       it('should get the bus service data', async(() => {
-        let service = TestBed.get(HttpService);
+        const service = TestBed.get(HttpService);
         const spy = spyOn(service, 'getBusServiceDetails').and.returnValue(Observable.of(BUS_SERVICE_DATA));
         component.getBusServiceDetails();
         expect(component.busServiceData).toEqual(BUS_SERVICE_DATA.data);
@@ -54,7 +54,7 @@ describe('Bus reporting app', () => {
 
     describe('on failure', () => {
       it('cannot populate the data on the screen', async(() => {
-        let service = TestBed.get(HttpService);
+        const service = TestBed.get(HttpService);
         const spy = spyOn(service, 'getBusServiceDetails').and.returnValue(Observable.throw({}));
         component.getBusServiceDetails();
         expect(component.busServiceData).toEqual(null);

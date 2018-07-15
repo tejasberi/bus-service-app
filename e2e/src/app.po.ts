@@ -5,7 +5,19 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getNavHeader() {
+    return element(by.css('a.navbar-brand')).getText();
+  }
+
+  getServiceNames() {
+    return element.all(by.css('span.bus-service-title')).getText()
+  }
+
+  getOpenChevron() {
+    return element.all(by.css('.bus-service-container h3'));
+  }
+
+  getServiceTable() {
+    return element(by.css('table.table'));
   }
 }
