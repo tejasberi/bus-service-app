@@ -6,10 +6,10 @@ export interface BusServiceData {
             organisation: string;
         }
     ];
-};
+}
 
 export interface BusTripData {
     busId: string;
     deviationFromTimetable: number;
     routeVariant: string;
-};
+}

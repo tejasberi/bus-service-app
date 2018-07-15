@@ -10,9 +10,9 @@ describe('OnTimeTrackerDirective', () => {
             template: `<div ontimeTracker [status]="eventString"></div>`
         })
         class TestComponent {
-            public eventString: number = 200;
+            public eventString = 200;
         }
-        let stub: any = {}, componentFixture: ComponentFixture<TestComponent>;
+        let componentFixture: ComponentFixture<TestComponent>;
         TestBed.configureTestingModule({
             declarations: [OnTimeTrackerDirective, TestComponent],
         });
@@ -29,9 +29,9 @@ describe('OnTimeTrackerDirective', () => {
             template: `<div ontimeTracker [status]="eventString"></div>`
         })
         class TestComponent {
-            public eventString: number = -200;
+            public eventString = -200;
         }
-        let stub: any = {}, componentFixture: ComponentFixture<TestComponent>;
+        let componentFixture: ComponentFixture<TestComponent>;
         TestBed.configureTestingModule({
             declarations: [OnTimeTrackerDirective, TestComponent],
         });
@@ -48,9 +48,9 @@ describe('OnTimeTrackerDirective', () => {
             template: `<div ontimeTracker [status]="eventString"></div>`
         })
         class TestComponent {
-            public eventString: number = 301;
+            public eventString = 301;
         }
-        let stub: any = {}, componentFixture: ComponentFixture<TestComponent>;
+        let componentFixture: ComponentFixture<TestComponent>;
         TestBed.configureTestingModule({
             declarations: [OnTimeTrackerDirective, TestComponent],
         });

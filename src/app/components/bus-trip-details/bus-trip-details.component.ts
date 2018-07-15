@@ -10,7 +10,7 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 export class BusTripDetailsComponent {
 
   @Input() busService;
-  public isOpen: boolean = false;
+  public isOpen = false;
   public notesArray = [];
   public notesData: string;
 

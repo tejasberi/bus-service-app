@@ -1,6 +1,9 @@
 import { AppPage } from './app.po';
 import { browser, by, element } from 'protractor';
 
+
+// Adding some sample e2e tests to showcase capabilities
+
 describe('Bus service app', () => {
   let page: AppPage;
 

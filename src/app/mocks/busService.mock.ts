@@ -53,4 +53,4 @@ export const BUS_SERVICE_DATA = {
             ]
         }
     ]
-}
+};

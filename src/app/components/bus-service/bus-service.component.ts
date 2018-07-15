@@ -7,7 +7,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-export class BusServiceComponent{
+export class BusServiceComponent {
 
   @Input() busServiceData: object;
 
