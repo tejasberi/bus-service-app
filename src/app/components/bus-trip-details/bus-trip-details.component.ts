@@ -14,8 +14,9 @@ export class BusTripDetailsComponent {
   public notesArray = [];
   public notesData: string;
 
-// Handling the notes entered by user
+  // Handling the notes entered by user
   saveNotes(note): void {
+    if (!note) { return; }
     this.notesArray.push(note);
     this.notesData = null;
   }
