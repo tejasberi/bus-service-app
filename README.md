@@ -1,4 +1,4 @@
-# Angular6 Bus-report-app
+# Angular Bus-report-app
 
 This is a sample project showing the capability to execute angular 6 app.
 
